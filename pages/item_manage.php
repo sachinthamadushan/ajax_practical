@@ -18,7 +18,7 @@
                 <th>Category</th>
                 <th></th>
             </thead>
-            <tbody>
+            <tbody id="catList">
                 <tr>
                     <td>1</td>
                     <td>Vegetable</td>
