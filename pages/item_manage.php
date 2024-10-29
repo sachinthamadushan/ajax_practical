@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Manage Category</h5>
-                <form id="categoryForm">
+                <form id="cat" method="POST">
                     <label class="form-label">Category</label>
                     <input type="text" class="form-control" id="category">
                     <button onclick="saveCategory();" type="submit" class="btn btn-primary mt-3">Create</button>
