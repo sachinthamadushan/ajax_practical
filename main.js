@@ -1,6 +1,5 @@
 function saveCategory() {
         let category = document.getElementById("category").value;
-        alert(category);
         let httpRequest = new XMLHttpRequest();
         httpRequest.open("POST", "controller/saveCategory.php", true);
         httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
