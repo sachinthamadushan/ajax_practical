@@ -19,13 +19,7 @@
                 <th></th>
             </thead>
             <tbody id="catList">
-                <tr>
-                    <td>1</td>
-                    <td>Vegetable</td>
-                    <td><a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
     </div>
