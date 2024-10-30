@@ -1,15 +1,15 @@
 function saveCategory() {
-        let category = document.getElementById("category").value;
-        let httpRequest = new XMLHttpRequest();
-        httpRequest.open("POST", "controller/saveCategory.php", true);
-        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        httpRequest.onreadystatechange = () => {
-            if (httpRequest.readyState === 4 && httpRequest.status === 200) {
-                loadCategory();
-                alert(httpRequest.responseText);
-            }
-        };
-        httpRequest.send("category=" + category);
+    let category = document.getElementById("category").value;
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open("POST", "controller/saveCategory.php", true);
+    httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    httpRequest.onreadystatechange = () => {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+            loadCategory();
+            alert(httpRequest.responseText);
+        }
+    };
+    httpRequest.send("category=" + category);
 }
 
 function loadCategory() {
@@ -24,7 +24,7 @@ function loadCategory() {
 }
 
 let catID;
-function chengeDetails(id,category){
+function chengeDetails(id, category) {
     catID = id;
     document.getElementById("btn_create").style.display = "none";
     document.getElementById("btn_update").style.display = "block";
@@ -44,4 +44,18 @@ function updateCategory() {
     };
     httpRequest.send("category=" + category + "&id=" + catID);
 }
+
+function deleteCategory(id) {
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open("POST", "controller/deleteCategory.php", true);
+    httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    httpRequest.onreadystatechange = () => {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+            loadCategory();
+            alert(httpRequest.responseText);
+        }
+    };
+    httpRequest.send("id=" + id);
+}
+
 
