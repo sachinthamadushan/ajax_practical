@@ -23,7 +23,15 @@ function loadCategory() {
     httpRequest.send();
 }
 
-function chengeDetails(){
-    
+let catID;
+function chengeDetails(id,category){
+    catID = id;
+    document.getElementById("btn_create").style.display = "none";
+    document.getElementById("btn_update").style.display = "block";
+    document.getElementById("category").value = category;
+}
+
+function updateCategory() {
+    alert("update");
 }
 

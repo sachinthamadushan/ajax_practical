@@ -11,7 +11,7 @@ if (mysqli_num_rows($result) > 0) {
         <td>' . $row['id'] . '</td>
         <td>' . $row['category'] . '</td>
         <td>
-        <a onclick="chengeDetails(); return false;" class="btn btn-success">Edit</a>
+        <a onclick="chengeDetails(' . $row['id'] . ', \'' . $row['category'] . '\'' . '); return false;" class="btn btn-success">Edit</a>
         <a class="btn btn-danger">Delete</a>
         </td>
         </tr>
