@@ -8,7 +8,7 @@
     <title>Dashboard</title>
 </head>
 
-<body onload="loadCategory();">
+<body>
 
     <?php include 'componets/navigation.php'; ?>
     <div class="container">

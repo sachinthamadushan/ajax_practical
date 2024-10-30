@@ -58,4 +58,18 @@ function deleteCategory(id) {
     httpRequest.send("id=" + id);
 }
 
+function setCategory(){
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open("GET", "controller/setCategory.php", true);
+    httpRequest.onreadystatechange = () => {
+        if (httpRequest.status === 200) {
+            alert(httpRequest.responseText);
+            document.getElementById("setCat").value = httpRequest.responseText;
+        }
+    };
+    httpRequest.send();
+}
+window.onload = setCategory;
+window.onload = loadCategory;
+
 
