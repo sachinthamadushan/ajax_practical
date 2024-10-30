@@ -22,3 +22,8 @@ function loadCategory() {
     };
     httpRequest.send();
 }
+
+function chengeDetails(){
+    
+}
+

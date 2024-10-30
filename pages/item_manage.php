@@ -6,7 +6,8 @@
                 <form id="cat" method="POST">
                     <label class="form-label">Category</label>
                     <input type="text" class="form-control" id="category">
-                    <button onclick="saveCategory();" type="submit" class="btn btn-primary mt-3">Create</button>
+                    <button id="btn_create" onclick="saveCategory();" type="submit" class="btn btn-primary mt-3">Create</button>
+                    <button id="btn_update" style="display: none;" onclick="" type="submit" class="btn btn-warning mt-3">Update</button>
                 </form>
             </div>
         </div>
