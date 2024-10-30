@@ -32,6 +32,16 @@ function chengeDetails(id,category){
 }
 
 function updateCategory() {
-    alert("update");
+    let category = document.getElementById("category").value;
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open("POST", "controller/updateCategory.php", true);
+    httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    httpRequest.onreadystatechange = () => {
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+            loadCategory();
+            alert(httpRequest.responseText);
+        }
+    };
+    httpRequest.send("category=" + category + "&id=" + catID);
 }
 
