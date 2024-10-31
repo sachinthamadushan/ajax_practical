@@ -61,7 +61,7 @@ function deleteCategory(id) {
     httpRequest.send("id=" + id);
 }
 
-function setCategory(){
+function setCategory() {
     alert("setCategory");
     let httpRequest = new XMLHttpRequest();
     httpRequest.open("GET", "controller/setCategory.php", true);
@@ -72,6 +72,18 @@ function setCategory(){
         }
     };
     httpRequest.send();
+}
+
+// Items section starts here
+
+function saveItem() {
+    document.getElementById("itemForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        let item = document.getElementById("item_name").value;
+        alert(item);
+
+    });
+
 }
 
 
