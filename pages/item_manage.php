@@ -43,7 +43,15 @@
                 <div class="col p-2">
                     <label class="form-label">Select Category</label>
                     <select class="form-select" id="setCat">
-                        
+                        <?php include 'controller/connection.php';
+                        $sql = "SELECT * FROM category";
+                        $result = mysqli_query($conn, $sql);
+                        if (mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo '<option value="' . $row['id'] . '">' . $row['category'] . '</option>';
+                            }
+                        }
+                        ?>
                     </select>
                 </div>
 

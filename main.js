@@ -1,3 +1,6 @@
+
+window.onload = setCategory;
+window.onload = loadCategory;
 function saveCategory() {
     let category = document.getElementById("category").value;
     let httpRequest = new XMLHttpRequest();
@@ -59,6 +62,7 @@ function deleteCategory(id) {
 }
 
 function setCategory(){
+    alert("setCategory");
     let httpRequest = new XMLHttpRequest();
     httpRequest.open("GET", "controller/setCategory.php", true);
     httpRequest.onreadystatechange = () => {
@@ -69,7 +73,7 @@ function setCategory(){
     };
     httpRequest.send();
 }
-window.onload = setCategory;
-window.onload = loadCategory;
+
+
 
 
