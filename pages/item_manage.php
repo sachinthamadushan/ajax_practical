@@ -28,22 +28,22 @@
         <div class="card col-10">
             <div class="card-body">
                 <h5 class="card-title">Manage Item</h5>
-                <form id="itemForm" method="POST">
+                <form id="itemForm" method="POST" enctype="multipart/form-data">
                     <div class="col p-2">
                         <label class="form-label">Item Name</label>
-                        <input type="text" class="form-control" id="item_name">
+                        <input type="text" class="form-control" name="item_name" id="name">
                     </div>
                     <div class="col p-2">
                         <label class="form-label">Unit Price</label>
-                        <input type="number" class="form-control" id="price">
+                        <input type="number" class="form-control" name="price" id="price">
                     </div>
                     <div class="col p-2">
                         <label class="form-label">Image</label>
-                        <input type="file" class="form-control" id="img_url">
+                        <input type="file" class="form-control" name="img_url" id="img_url">
                     </div>
                     <div class="col p-2">
                         <label class="form-label">Select Category</label>
-                        <select class="form-select" id="setCat">
+                        <select class="form-select" id="setCat" name="setCat">
                             <?php include 'controller/connection.php';
                             $sql = "SELECT * FROM category";
                             $result = mysqli_query($conn, $sql);

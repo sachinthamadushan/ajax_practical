@@ -80,7 +80,22 @@ function saveItem() {
     document.getElementById("itemForm").addEventListener("submit", function (e) {
         e.preventDefault();
         let item = document.getElementById("item_name").value;
-        alert(item);
+        let price = document.getElementById("price").value;
+        let catID = document.getElementById("setCat").value;
+        let img = document.getElementById("img_url").value;
+
+        let httpRequest = new XMLHttpRequest();
+        httpRequest.open("POST", "controller/saveItem.php", true);
+        httpRequest.setRequestHeader("Content-type", 
+            "application/x-www-form-urlencoded");
+        httpRequest.onreadystatechange = () => {
+            if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+                document.getElementById("itemForm").reset();
+                alert(httpRequest.responseText);
+            }
+        };
+        httpRequest.send("item=" + item + "&price=" + price + "&catID=" 
+            + catID + "&img=" + img);
 
     });
 
