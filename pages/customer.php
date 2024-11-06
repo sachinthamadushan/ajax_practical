@@ -16,9 +16,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Manage Customer</h5>
                         <form method="POST" id="cForm">
-                            <input type="text" id="cnic" placeholder="NIC" class="form-control p-2 mt-3">
-                            <input type="text" id="cname" placeholder="Name" class="form-control p-2 mt-3">
-                            <input type="password" id="cpwd" placeholder="Password" class="form-control p-2 mt-3">
+                            <input type="text" id="cnic" placeholder="NIC" class="form-control p-2 mt-3" required>
+                            <input type="text" id="cname" placeholder="Name" class="form-control p-2 mt-3" required>
+                            <input type="password" id="cpwd" placeholder="Password" class="form-control p-2 mt-3" required>
                             <button type="submit" onclick="saveCustomer();" class="btn btn-success mt-3">Sign Up</button>
                         </form>
                     </div>
@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../js/customer.js"></script>
 </body>
 </html>
