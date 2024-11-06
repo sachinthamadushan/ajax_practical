@@ -10,7 +10,7 @@
           <a class="nav-link active" aria-current="page" href="#">Dashboad</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Customer</a>
+          <a class="nav-link active" aria-current="page" href="pages/customer.php">Customer</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
