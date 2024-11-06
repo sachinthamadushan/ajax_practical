@@ -17,8 +17,8 @@ function saveCustomer() {
     hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     hr.onreadystatechange = () => {
         if (hr.readyState === 4 && hr.status === 200) {
-            document.getElementById("cForm").reset();
             alert(hr.responseText);
+            document.getElementById("cForm").reset();
         }
     }
     hr.send("nic=" + nic + "&name=" + cusName + "&psw=" + psw);
